@@ -1,37 +1,53 @@
+//wensday 9:00
 #include <iostream>
 #include <string>
 
-// A base class that must be implemented by anything that wants to be printable
-class IStringable {
-    public :
-    virtual std :: string toString () const = 0;
-    virtual ~ IStringable() = default ;
+using namespace std;
 
+class Printable {
+public:
+    void print() const {
+        cout << toString() << endl;
+    }
+
+protected:
+    virtual string toString() const = 0;
 };
 
-// " Mixin " class that provides functionality to any IStringable
-class Printable {
-    public :
-    void print ( const IStringable & obj ) {
-        std :: cout << obj . toString () << std :: endl ;
+class Book : public Printable {
+private:
+    string title;
+    string author;
+
+public:
+    Book(const string& t, const string& a): title(t), author(a) {}
+
+protected:
+    string toString() const override {
+        return "Book: " + title + " by " + author;
     }
 };
 
-// Book must implement the IStringable contract
-class Book : public IStringable {
-    private :
-    std :: string title ;
-    std :: string author ;
-    public :
-    Book ( std :: string t , std :: string a ) : title ( t ) , author ( a ) {}
-    std :: string toString () const override {
-    return "’" + title + "’ by " + author ;
-}
-};
-
-int main () {
-    Book myBook (" The Hobbit ", "J.R.R. Tolkien ") ;
-    Printable p ;
-    p . print ( myBook ) ; // Use the printable functionality on the book
+int main() {
+    Book b("Some book", "somebody");
+    b.print();
     return 0;
 }
+
+
+/*
+Q2:Mixins and interfaces with default methods allow you to add functionality to classes without imposing a rigid inheritance hierarchy.
+they can be used to reuse code without duplication.
+
+Q3:default methods are ready-made implementations that are inherited by all classes that implement the interface.
+
+Q4: Inheritance: simple, but rigid and can lead to deep hierarchies.
+Composition: more flexible, promotes “has-a” relationships.
+Mixins/interfaces: add reusable behavior across unrelated classes, 
+but can introduce complexity or conflicts if overused.
+
+
+
+
+
+*/
