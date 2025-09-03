@@ -1,10 +1,10 @@
+//wensday 9:00
 #include <iostream>
 
 class BankAccount {
     private :
     double balance ;
     public :
-    // Constructor to initialize the balance
     BankAccount ( double initialBalance ) {
         if ( initialBalance >= 0) {
             balance = initialBalance ;
@@ -13,14 +13,12 @@ class BankAccount {
         }
     }
     
-    // Method to add money to the account
     void deposit ( double amount ) {
         if ( amount > 0) {
             balance += amount ;
         }
     }
     
-    // Method to view the current balance
     double getBalance () {
         return balance ;
     }
@@ -36,3 +34,18 @@ int main () {
     return 0;
 
 }
+
+
+
+/*
+Q2: Class is drawing. Object is finished product.
+
+Q3: public: A class member is accessible from anywhere .
+private: A class member is accessible only within the class itself.
+protected: A class member is accessible within the class itself, its subclasses.
+
+Q4: Constructor: A special class method that is called when an object is created.
+Default constructor: This is a constructor without parameters.
+If the programmer has not written any constructors, the compiler automatically adds one.
+But if you have defined at least one of your own constructors, the default constructor is not automatically created.
+*/
