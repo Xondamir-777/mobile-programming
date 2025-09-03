@@ -1,3 +1,4 @@
+//wensday 9:00
 #include <iostream>
 
 /**
@@ -18,3 +19,17 @@ std :: cout << " Comments provide context ." << std :: endl ;
 
 return 0;
 }
+
+
+/*
+Q2: comments helps to remind or understand logic of program.
+It is useful on teamwork, because all team members may have their own style of writing code and comments help to understand team members' code.
+
+
+Q3: Javadoc (Java) and Doxygen (C++) allow you to write structured comments that are automatically converted into convenient documentation.
+
+
+Q4: if programmer uses understandable names for functions, classes and variables, it is not necessary to use comments to understand logic.
+However comments are necessary for large code or new developers.
+
+*/
