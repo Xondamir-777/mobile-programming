@@ -1,12 +1,13 @@
-//Monday 14:00
+//wensday 9:00
 #include <iostream>
 
+using namespace std;
+
 int main ( int argc , char * argv []) {
-    std :: cout << " Number of arguments received : " << argc << std :: endl ;
-    std :: cout << " Arguments are:" << std :: endl ;
+    cout << " Number of arguments received : " << argc << endl ;
+    cout << " Arguments are:" << endl ;
     for ( int i = 0; i < argc ; ++ i ) {
-        // argv [0] is always the name of the program itself
-        std :: cout << " Argument " << i << ": " << argv [ i ] << std :: endl ;
+        cout << " Argument " << i << ": " << argv [ i ] << endl ;
     }
     return 0;
 }
