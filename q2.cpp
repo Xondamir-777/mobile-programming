@@ -1,17 +1,27 @@
+//wensday 9:00
 #include <iostream>
 
 int main () {
-int a = 10;
-int b = 20;
+int a = 25;
+int b = 50;
 
-std :: cout << " Before swap : a = " << a << ", b = " << b << std :: endl ;
 
-// Swapping using arithmetic operations . This logic works in both C++ and Java .
-a = a + b ; // a becomes 30
-b = a - b ; // b becomes 10 (30 - 20)
-a = a - b ; // a becomes 20 (30 - 10)
+a = a + b ;
+b = a - b ;
+a = a - b ;
 
-std :: cout << " After swap : a = " << a << ", b = " << b << std :: endl ;
+std :: cout << " a = " << a << ", b = " << b << std :: endl ;
 
 return 0;
 }
+
+/*
+Q2: Primitive types store a fixed amount of memory at a fixed address, while reference types store an address for primitive type data, a data set, or structured data.
+
+Q3: Scope is part of the program where variable can be used.
+Local scope. Variables that was created inside a functon and can  be used inside this function.
+class-level/static. Variables that declared inside a class but outside methods. they can be used only inside this class but methods and functions of class also can use them
+
+Q4: The type of a variable is determined at compile time. The compiler checks the correctness of the types before the program is run.
+The type of a variable is determined during program execution. The same variable can store data of different types.
+*/
